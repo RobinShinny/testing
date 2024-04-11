@@ -1,20 +1,2 @@
-<VirtualHost *:80>
-    ServerName bloxr11.org
-    DocumentRoot /path/to/your/document/root
-
-    # Allow access to all files
-    <Directory /path/to/your/document/root>
-        Order allow,deny
-        Allow from all
-    </Directory>
-
-    # Disable directory browsing
-    <Directory /path/to/your/document/root>
-        Options -Indexes
-    </Directory>
-
-    # Redirect HTTP to HTTPS
-    RewriteEngine On
-    RewriteCond %{HTTPS} off
-    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-</VirtualHost>
+RewriteEngine On
+RewriteRule ^index\.html$ http://BloxoriaV.com [R=301,L]
