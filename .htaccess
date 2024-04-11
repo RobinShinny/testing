@@ -1,0 +1,4 @@
+# Enable PHP
+<FilesMatch "\.php$">
+    SetHandler application/x-httpd-php
+</FilesMatch>
