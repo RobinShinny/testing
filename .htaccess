@@ -1,1 +1,3 @@
-Redirect /index.html http://blox.com
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^bloxoria\.com$ [NC]
+RewriteRule ^(.*)$ http://www.bloxoria.com/$1 [L,R=301]
