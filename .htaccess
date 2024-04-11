@@ -1,2 +1,9 @@
-# Custom 404 error page
-ErrorDocument 404 /404.html
+# Serve PHP files if they exist, otherwise redirect to 404.html
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.*)$ $1.php [L]
+    RewriteRule ^ - [R=404,L]
+</IfModule>
