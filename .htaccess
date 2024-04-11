@@ -1,2 +1,1 @@
-RewriteEngine On
-RewriteRule ^index\.html$ http://BloxoriaV.com [R=301,L]
+Redirect /index.html http://blox.com
