@@ -1,3 +1,0 @@
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^(www\.)?testing-iau\pages.com$ [NC]
-RewriteRule ^(.*)$ http://ha11.testing-iau.pages.dev/$1 [L,R=301]
