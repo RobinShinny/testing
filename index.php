@@ -1,1 +1,4 @@
-Hi
+<?php
+  header("Location /?")
+
+    ?>
